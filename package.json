@@ -4,6 +4,7 @@
   },
   "private": "true",
   "scripts": {
-    "build": "marp ./src/slide.md -o public/index.html"
+    "build": "marp ./src/slide.md -o public/index.html",
+    "serve": "marp ./src -s"
   }
 }

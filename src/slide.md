@@ -13,7 +13,7 @@ paginate: true
 
 # 目次
 1. 今回のハードフォークの内容
-1. ABCとBCHN
+1. BCHとABC
 1. ハードフォーク後の動向
 
 ---
@@ -36,9 +36,10 @@ paginate: true
 - cw-144と呼ばれる
 - 過去144ブロックの生成間隔の移動平均などから難易度を決める
 - 難易度が変化しやすい分、ぶれが激しい
-- 難易度の低い間だけBCHをマイニングするマージマイニングが問題
+- 難易度の低い間だけBCHをマイニングされることが問題（turbo blocks）
     - BCHだけマイニングしている人は損をする
     - ブロック生成間隔が不安定になる
+    - 取引所の承認数が引き上げられる
 
 ---
 # 1.3. ASERT
@@ -91,10 +92,10 @@ paginate: true
 - 今回のハードフォーク以降は仕様から外される
 
 ---
-# 2. ABCとBCHN
+# 2. BCHとABC
 1. [~5月] IFPの議論から、Bitcoin ABC(ABC)のIFPに反対する開発者がBitcoin Cash Node(BCHN)を立ち上げる
     - 参考: https://tech.coincheck.blog/entry/2020/05/26/114705
-1. [7月頃] [BCHN側でASERTが提案される](https://read.cash/@jtoomim/bch-upgrade-proposal-use-asert-as-the-new-daa-1d875696)
+1. [7月頃] [ASERTが提案される](https://read.cash/@jtoomim/bch-upgrade-proposal-use-asert-as-the-new-daa-1d875696)
 1. [7月頃] [ABC側でGrasbergという別の難易度調整アルゴリズムが提案される](https://read.cash/@deadalnix/announcing-the-grasberg-daa-88c61cee)
 1. [~8月] [コミュニティの議論の中でASERTが優勢となる](https://read.cash/@sha256_88ebd526/bitcoin-cash-bch-november-2020-upgrade-statement-f7c03159)
     - ABC以外の主なノード実装はASERTを採用する
@@ -102,22 +103,28 @@ paginate: true
 ---
 
 5. [8月] [ABCがASERTを受け入れるが、同時にIFPを強制するルールも追加する](https://medium.com/bitcoin-abc/bitcoin-abcs-plan-for-the-november-2020-upgrade-65fb84c4348f)
-    - BCHNとABCがソフトフォークすることになる
+    - ABCがソフトフォークすることになる
 1. [8月~] [大手のマイナーがBCHNを支持するシグナルを出し始める](https://news.bitcoin.com/hash-watch-bitcoin-cash-miners-begin-signaling-node-implementations/)
     - https://cash.coin.dance/blocks/historical
+1. [8月~] [BCHとABCのハードフォーク後の先物取引を始める取引所が出てくる](https://coinflex.com/ja/blog/coinflex-launches-governance-futures-bch-vs-bch-abc/)
 1. [11月] [ABCがBCHNのネットワークに従う実装もサポートし始める (Bitcoin ABC BCHN Edition)](https://blog.bitcoinabc.org/2020/11/06/bitcoin-abc-will-support-both-bcha-and-bchn-after-the-chain-split/)
 
 ---
 # 3. ハードフォーク後の動向
 - 661648ブロックでフォーク
-- ハッシュレートはBCHN:ABCが95:5ほどの割合
+- ハッシュレートはBCH:ABCが95:5ほどの割合
 - [難易度の遷移](https://blockchair.com/bitcoin-cash/charts/difficulty?interval=1m&compare=bitcoin-abc)
 - BCHN
     - 大きな影響はなくBCHを継承
-    - Binance poolなど一部のマイナーは掘るのを止めている
 - ABC
     - ハードフォーク後24時間で7ブロックしか掘られなかった
         - すでに難易度調整により正常になっている
     - mempoolが頻繁に詰まっている
     - [ABCを煽るようなメッセージのついた空ブロックが掘られる](https://news.bitcoin.com/slow-and-empty-blocks-with-a-mysterious-message-abcs-new-chain-off-to-a-rocky-start/)
         - ハッシュレートが低いのでマイナーに遊ばれてる
+
+---
+# おわりに
+- 今回の分裂はコミュニティ主導のプロジェクトをコミュニティが守るという点で成功
+- BCHNを中心としたBCHコミュニティの尽力あっての成功
+- コミュニティの分裂という痛みは今回もあった
